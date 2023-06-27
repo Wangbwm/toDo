@@ -1,19 +1,19 @@
 #include "kdatabase.h"
 /**
- * Êı¾İ·ÃÎÊ²ã¾ßÌåÊµÏÖ£¬Á¬½ÓÊı¾İ¿âÊµÏÖÔöÉ¾¸Ä²é¹¤×÷
+ * æ•°æ®è®¿é—®å±‚å…·ä½“å®ç°ï¼Œè¿æ¥æ•°æ®åº“å®ç°å¢åˆ æ”¹æŸ¥å·¥ä½œ
  */
 KDatabase::KDatabase(QObject *parent)
 	: QObject(parent)
 {
 	Server_conn();
 }
-// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+// å…³é—­æ•°æ®åº“è¿æ¥
 KDatabase::~KDatabase()
 {
 	m_db.close();
 }
 
-// ³õÊ¼»¯Êı¾İÔ´
+// åˆå§‹åŒ–æ•°æ®æº
 void KDatabase::Server_conn()
 {
 	m_db = QSqlDatabase::addDatabase("QMYSQL");
@@ -25,31 +25,31 @@ void KDatabase::Server_conn()
 	{
 		qDebug() << "error";
 	}
-	m_db.setHostName("114.132.229.115"); //
-	m_db.setPort(3306);       // Èç¹ûÊ¹ÓÃµÄÊÇÄ¬ÈÏ¶Ë¿Ú¿ÉÒÔ²»ÉèÖÃ
-	m_db.setUserName("root");	// Êı¾İ¿âÓÃ»§Ãû
-	m_db.setPassword("1259963577"); // Êı¾İ¿âÃÜÂë
-	m_db.setDatabaseName("todo"); // Êı¾İ¿âÃû×Ö
+	m_db.setHostName("***********"); //
+	m_db.setPort(3306);       // å¦‚æœä½¿ç”¨çš„æ˜¯é»˜è®¤ç«¯å£å¯ä»¥ä¸è®¾ç½®
+	m_db.setUserName("*******");	// æ•°æ®åº“ç”¨æˆ·å
+	m_db.setPassword("********"); // æ•°æ®åº“å¯†ç 
+	m_db.setDatabaseName("todo"); // æ•°æ®åº“åå­—
 	if (m_db.open())
 	{
-		qDebug() << QStringLiteral("Êı¾İ¿â´ò¿ª³É¹¦, ¿ÉÒÔ¶ÁĞ´Êı¾İÁË......");
-		m_daoMsg = QStringLiteral("Êı¾İ¿â´ò¿ª³É¹¦, ¿ÉÒÔ¶ÁĞ´Êı¾İÁË......");
+		qDebug() << QStringLiteral("æ•°æ®åº“æ‰“å¼€æˆåŠŸ, å¯ä»¥è¯»å†™æ•°æ®äº†......");
+		m_daoMsg = QStringLiteral("æ•°æ®åº“æ‰“å¼€æˆåŠŸ, å¯ä»¥è¯»å†™æ•°æ®äº†......");
 	}
 	else
 	{
-		qDebug() << QStringLiteral("Êı¾İ¿â´ò¿ªÊ§°Ü: ") + m_db.lastError().text();
-		m_daoMsg = QStringLiteral("Êı¾İ¿â´ò¿ªÊ§°Ü: ") + m_db.lastError().text();
+		qDebug() << QStringLiteral("æ•°æ®åº“æ‰“å¼€å¤±è´¥: ") + m_db.lastError().text();
+		m_daoMsg = QStringLiteral("æ•°æ®åº“æ‰“å¼€å¤±è´¥: ") + m_db.lastError().text();
 	}
 }
 
-// ¸ù¾İÓÃ»§ÃûÃÜÂë²éÑ¯ÓÃ»§£¬Ê¹ÓÃprepare½«sqlÓï¾ä¸ñÊ½¶¨ÏÂÀ´£¬·ÀÖ¹sql×¢Èë
+// æ ¹æ®ç”¨æˆ·åå¯†ç æŸ¥è¯¢ç”¨æˆ·ï¼Œä½¿ç”¨prepareå°†sqlè¯­å¥æ ¼å¼å®šä¸‹æ¥ï¼Œé˜²æ­¢sqlæ³¨å…¥
 bool KDatabase::selectAccount(QString username, QString password)
 {
 	if (!m_db.open()) {
 		return false;
 	}
 	QSqlQuery query;
-	//·ÀÖ¹sql×¢Èë
+	//é˜²æ­¢sqlæ³¨å…¥
 	QString sqltext = "select * from UserAccount where username = :username and password = :password";
 	query.prepare(sqltext);
 	query.bindValue(":username", username);
@@ -60,15 +60,15 @@ bool KDatabase::selectAccount(QString username, QString password)
 		return false;
 	}
 	else if (!query.next()) {
-		// ²éÑ¯½á¹ûÎª¿Õ
+		// æŸ¥è¯¢ç»“æœä¸ºç©º
 		return false;
 	}
 	else {
-		// ²éÑ¯½á¹û·Ç¿Õ
+		// æŸ¥è¯¢ç»“æœéç©º
 		return true;
 	}
 }
-// ¸ù¾İÓÃ»§Ãû²éÑ¯ÓÃ»§£¬Ê¹ÓÃprepare½«sqlÓï¾ä¸ñÊ½¶¨ÏÂÀ´£¬·ÀÖ¹sql×¢Èë
+// æ ¹æ®ç”¨æˆ·åæŸ¥è¯¢ç”¨æˆ·ï¼Œä½¿ç”¨prepareå°†sqlè¯­å¥æ ¼å¼å®šä¸‹æ¥ï¼Œé˜²æ­¢sqlæ³¨å…¥
 bool KDatabase::selectAccountByName(QString username)
 {
 	if (!m_db.open()) {
@@ -84,17 +84,17 @@ bool KDatabase::selectAccountByName(QString username)
 		return false;
 	}
 	else if (!query.next()) {
-		// ²éÑ¯½á¹ûÎª¿Õ
+		// æŸ¥è¯¢ç»“æœä¸ºç©º
 		return false;
 	}
 	else {
-		// ²éÑ¯½á¹û·Ç¿Õ
+		// æŸ¥è¯¢ç»“æœéç©º
 		return true;
 	}
 	return false;
 }
 
-// ²éÑ¯ÓÃ»§ÊÕµ½ÑûÇëÏûÏ¢
+// æŸ¥è¯¢ç”¨æˆ·æ”¶åˆ°é‚€è¯·æ¶ˆæ¯
 bool KDatabase::selectUserInfoByUserIdAndGroupId(int user_id, int group_id)
 {
 	if (!m_db.open()) {
@@ -111,11 +111,11 @@ bool KDatabase::selectUserInfoByUserIdAndGroupId(int user_id, int group_id)
 		return false;
 	}
 	else if (!query.next()) {
-		// ²éÑ¯½á¹ûÎª¿Õ
+		// æŸ¥è¯¢ç»“æœä¸ºç©º
 		return false;
 	}
 	else {
-		// ²éÑ¯½á¹û·Ç¿Õ
+		// æŸ¥è¯¢ç»“æœéç©º
 		return true;
 	}
 	return false;
@@ -135,16 +135,16 @@ bool KDatabase::selectHaveGroup(int group_id)
 		return false;
 	}
 	else if (!query.next()) {
-		// ²éÑ¯½á¹ûÎª¿Õ
+		// æŸ¥è¯¢ç»“æœä¸ºç©º
 		return false;
 	}
 	else {
-		// ²éÑ¯½á¹û·Ç¿Õ
+		// æŸ¥è¯¢ç»“æœéç©º
 		return true;
 	}
 	return false;
 }
-// ĞÂ½¨ÓÃ»§
+// æ–°å»ºç”¨æˆ·
 bool KDatabase::insertAccount(QString username, QString password)
 {
 	if (!m_db.open()) {
@@ -162,7 +162,7 @@ bool KDatabase::insertAccount(QString username, QString password)
 	}
 	return true;
 }
-// ĞÂ½¨ÓÃ»§±íÓÃ»§
+// æ–°å»ºç”¨æˆ·è¡¨ç”¨æˆ·
 bool KDatabase::insertTodoUser(QString username)
 {
 	if (!m_db.open()) {
@@ -179,7 +179,7 @@ bool KDatabase::insertTodoUser(QString username)
 	}
 	return true;
 }
-// ĞÂ½¨·Ö×é
+// æ–°å»ºåˆ†ç»„
 bool KDatabase::insertGroup(QString groupName, int user_id)
 {
 	if (!m_db.open()) {
@@ -197,7 +197,7 @@ bool KDatabase::insertGroup(QString groupName, int user_id)
 	}
 	return true;
 }
-// ĞÂ½¨ÑûÇëĞÅÏ¢
+// æ–°å»ºé‚€è¯·ä¿¡æ¯
 bool KDatabase::insertInfo(int user_id, int group_id)
 {
 	if (!m_db.open()) {
@@ -215,7 +215,7 @@ bool KDatabase::insertInfo(int user_id, int group_id)
 	}
 	return true;
 }
-// É¾³ı´ı°ì
+// åˆ é™¤å¾…åŠ
 bool KDatabase::deleteTaskByID(int id)
 {
 	if (!m_db.open()) {
@@ -231,7 +231,7 @@ bool KDatabase::deleteTaskByID(int id)
 	}
 	return true;
 }
-// É¾³ı·Ö×é
+// åˆ é™¤åˆ†ç»„
 bool KDatabase::deleteGroupByID(int id)
 {
 	if (!m_db.open()) {
@@ -247,7 +247,7 @@ bool KDatabase::deleteGroupByID(int id)
 	}
 	return true;
 }
-// É¾³ı´ı°ì
+// åˆ é™¤å¾…åŠ
 bool KDatabase::deleteTaskByGroupId(int group_id)
 {
 	if (!m_db.open()) {
@@ -263,7 +263,7 @@ bool KDatabase::deleteTaskByGroupId(int group_id)
 	}
 	return true;
 }
-// É¾³ıÏûÏ¢
+// åˆ é™¤æ¶ˆæ¯
 bool KDatabase::deleteInfo(int group_id, int user_id)
 {
 	if (!m_db.open()) {
@@ -281,7 +281,7 @@ bool KDatabase::deleteInfo(int group_id, int user_id)
 	return true;
 }
 
-// ĞÂ½¨´ı°ì
+// æ–°å»ºå¾…åŠ
 bool KDatabase::createNewTaskByName(QString taskName, int userId)
 {
 	if (!m_db.open()) {
@@ -297,7 +297,7 @@ bool KDatabase::createNewTaskByName(QString taskName, int userId)
 	bool success = query.exec();
 	return success;
 }
-// ĞÂ½¨´ı°ì
+// æ–°å»ºå¾…åŠ
 bool KDatabase::createNewTaskByGroupId(int group_id, QString taskName)
 {
 	if (!m_db.open()) {
@@ -313,7 +313,7 @@ bool KDatabase::createNewTaskByGroupId(int group_id, QString taskName)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂ½ØÖ¹ÈÕÆÚ
+// æ›´æ–°æˆªæ­¢æ—¥æœŸ
 bool KDatabase::updateDueDate(int task_id, QDateTime due_date)
 {
 	if (!m_db.open()) {
@@ -328,7 +328,7 @@ bool KDatabase::updateDueDate(int task_id, QDateTime due_date)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂ´ı°ìÃû×Ö
+// æ›´æ–°å¾…åŠåå­—
 bool KDatabase::updateTaskName(int task_id, QString new_name)
 {
 	if (!m_db.open()) {
@@ -342,7 +342,7 @@ bool KDatabase::updateTaskName(int task_id, QString new_name)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂÌáĞÑÊ±¼ä
+// æ›´æ–°æé†’æ—¶é—´
 bool KDatabase::updateRemindTime(int task_id, QDateTime remindTime, bool is_repeated)
 {
 	if (!m_db.open()) {
@@ -357,7 +357,7 @@ bool KDatabase::updateRemindTime(int task_id, QDateTime remindTime, bool is_repe
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂÃèÊö
+// æ›´æ–°æè¿°
 bool KDatabase::updateDescription(int task_id, QString description)
 {
 	if (!m_db.open()) {
@@ -371,7 +371,7 @@ bool KDatabase::updateDescription(int task_id, QString description)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂµØµã
+// æ›´æ–°åœ°ç‚¹
 bool KDatabase::updateLocation(int task_id, QString location)
 {
 	if (!m_db.open()) {
@@ -385,7 +385,7 @@ bool KDatabase::updateLocation(int task_id, QString location)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂ±¸×¢
+// æ›´æ–°å¤‡æ³¨
 bool KDatabase::updateNote(int task_id, QString note)
 {
 	if (!m_db.open()) {
@@ -399,7 +399,7 @@ bool KDatabase::updateNote(int task_id, QString note)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂÓÅÏÈ¼¶
+// æ›´æ–°ä¼˜å…ˆçº§
 bool KDatabase::updatePriority(int task_id, int index)
 {
 	if (!m_db.open()) {
@@ -413,7 +413,7 @@ bool KDatabase::updatePriority(int task_id, int index)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂÓÃ»§·Ö×é
+// æ›´æ–°ç”¨æˆ·åˆ†ç»„
 bool KDatabase::updateUserGroup(int user_id, QString groups_list)
 {
 	if (!m_db.open()) {
@@ -427,7 +427,7 @@ bool KDatabase::updateUserGroup(int user_id, QString groups_list)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂ·Ö×éÓÃ»§
+// æ›´æ–°åˆ†ç»„ç”¨æˆ·
 bool KDatabase::updateGroupMember(int group_id, QString mem_list)
 {
 	if (!m_db.open()) {
@@ -441,7 +441,7 @@ bool KDatabase::updateGroupMember(int group_id, QString mem_list)
 	bool success = query.exec();
 	return success;
 }
-// ¸üĞÂ·Ö×éÃû×Ö
+// æ›´æ–°åˆ†ç»„åå­—
 bool KDatabase::updateGroupNameById(int group_id, QString newName)
 {
 	if (!m_db.open()) {
@@ -457,7 +457,7 @@ bool KDatabase::updateGroupNameById(int group_id, QString newName)
 }
 
 
-// ²éÑ¯ÓÃ»§·Ö×é
+// æŸ¥è¯¢ç”¨æˆ·åˆ†ç»„
 QVariant KDatabase::selectUsersGroup(QString username)
 {
 	if (!m_db.open()) {
@@ -475,7 +475,7 @@ QVariant KDatabase::selectUsersGroup(QString username)
 	}
 
 	if (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹û²¢°ó¶¨µ½QVariantÊµÀıÉÏ
+		// è·å–æŸ¥è¯¢ç»“æœå¹¶ç»‘å®šåˆ°QVariantå®ä¾‹ä¸Š
 		QVariant groupsList = query.value(0);
 		return groupsList;
 	}
@@ -483,7 +483,7 @@ QVariant KDatabase::selectUsersGroup(QString username)
 		return QVariant();
 	}
 }
-// ²éÑ¯·Ö×éID
+// æŸ¥è¯¢åˆ†ç»„ID
 QMap<int, QString> KDatabase::selectGroupID(QString groupName)
 {
 	QMap<int, QString>map;
@@ -500,14 +500,14 @@ QMap<int, QString> KDatabase::selectGroupID(QString groupName)
 		return map;
 	}
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		QString member_ids = query.value("member_ids").toString();
 		map.insert(id, member_ids);
 	}
 	return map;
 }
-// ²éÑ¯Î´°²ÅÅ
+// æŸ¥è¯¢æœªå®‰æ’
 QList<KTask> KDatabase::selectTaskUnscheduled(int userId)
 {
 	if (!m_db.open()) {
@@ -527,7 +527,7 @@ QList<KTask> KDatabase::selectTaskUnscheduled(int userId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = -1;
 		int userId = query.value("user_id").isNull() ? -1 : query.value("user_id").toInt();
@@ -553,7 +553,7 @@ QList<KTask> KDatabase::selectTaskUnscheduled(int userId)
 
 	return taskList;
 }
-// ²éÑ¯½üÆßÌì
+// æŸ¥è¯¢è¿‘ä¸ƒå¤©
 QList<KTask> KDatabase::selectTaskNext7Days(int userId)
 {
 	if (!m_db.open()) {
@@ -577,7 +577,7 @@ QList<KTask> KDatabase::selectTaskNext7Days(int userId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = -1;
 		int userId = query.value("user_id").isNull() ? -1 : query.value("user_id").toInt();
@@ -603,7 +603,7 @@ QList<KTask> KDatabase::selectTaskNext7Days(int userId)
 
 	return taskList;
 }
-// ²éÑ¯ÆßÌìºó
+// æŸ¥è¯¢ä¸ƒå¤©å
 QList<KTask> KDatabase::selectTaskNextWeek(int userId)
 {
 	if (!m_db.open()) {
@@ -625,7 +625,7 @@ QList<KTask> KDatabase::selectTaskNextWeek(int userId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = -1;
 		int userId = query.value("user_id").isNull() ? -1 : query.value("user_id").toInt();
@@ -651,7 +651,7 @@ QList<KTask> KDatabase::selectTaskNextWeek(int userId)
 
 	return taskList;
 }
-// ²éÑ¯ÒÑÍê³É
+// æŸ¥è¯¢å·²å®Œæˆ
 QList<KTask> KDatabase::selectHaveFinishedTasks(int userId)
 {
 	if (!m_db.open()) {
@@ -673,7 +673,7 @@ QList<KTask> KDatabase::selectHaveFinishedTasks(int userId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = -1;
 		int userId = query.value("user_id").isNull() ? -1 : query.value("user_id").toInt();
@@ -699,7 +699,7 @@ QList<KTask> KDatabase::selectHaveFinishedTasks(int userId)
 
 	return taskList;
 }
-// ²éÑ¯ËùÓĞ´ı°ì
+// æŸ¥è¯¢æ‰€æœ‰å¾…åŠ
 QList<KTask> KDatabase::selectAllTasks(int userId)
 {
 	if (!m_db.open()) {
@@ -719,7 +719,7 @@ QList<KTask> KDatabase::selectAllTasks(int userId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = -1;
 		int userId = query.value("user_id").isNull() ? -1 : query.value("user_id").toInt();
@@ -745,7 +745,7 @@ QList<KTask> KDatabase::selectAllTasks(int userId)
 
 	return taskList;
 }
-// ²éÑ¯·Ö×éÎ´Íê³É
+// æŸ¥è¯¢åˆ†ç»„æœªå®Œæˆ
 QList<KTask> KDatabase::selectTaskUnscheduledGroup(int groupId)
 {
 	if (!m_db.open()) {
@@ -765,7 +765,7 @@ QList<KTask> KDatabase::selectTaskUnscheduledGroup(int groupId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = query.value("group_id").isNull() ? -1 : query.value("group_id").toInt();
 		int userId = -1;
@@ -791,7 +791,7 @@ QList<KTask> KDatabase::selectTaskUnscheduledGroup(int groupId)
 
 	return taskList;
 }
-// ²éÑ¯·Ö×é7ÌìÄÚ
+// æŸ¥è¯¢åˆ†ç»„7å¤©å†…
 QList<KTask> KDatabase::selectTaskNext7DaysGroup(int groupId)
 {
 	if (!m_db.open()) {
@@ -815,7 +815,7 @@ QList<KTask> KDatabase::selectTaskNext7DaysGroup(int groupId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = query.value("group_id").isNull() ? -1 : query.value("group_id").toInt();
 		int userId = -1;
@@ -841,7 +841,7 @@ QList<KTask> KDatabase::selectTaskNext7DaysGroup(int groupId)
 
 	return taskList;
 }
-// ²éÑ¯·Ö×é7Ììºó
+// æŸ¥è¯¢åˆ†ç»„7å¤©å
 QList<KTask> KDatabase::selectTaskAfterNextWeekGroup(int groupId)
 {
 	if (!m_db.open()) {
@@ -863,7 +863,7 @@ QList<KTask> KDatabase::selectTaskAfterNextWeekGroup(int groupId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = query.value("group_id").isNull() ? -1 : query.value("group_id").toInt();
 		int userId = -1;
@@ -889,7 +889,7 @@ QList<KTask> KDatabase::selectTaskAfterNextWeekGroup(int groupId)
 
 	return taskList;
 }
-// ²éÑ¯·Ö×éÒÑÍê³É
+// æŸ¥è¯¢åˆ†ç»„å·²å®Œæˆ
 QList<KTask> KDatabase::selectHaveFinishedTasksGroup(int groupId)
 {
 	if (!m_db.open()) {
@@ -911,7 +911,7 @@ QList<KTask> KDatabase::selectHaveFinishedTasksGroup(int groupId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = query.value("group_id").isNull() ? -1 : query.value("group_id").toInt();
 		int userId = -1;
@@ -937,7 +937,7 @@ QList<KTask> KDatabase::selectHaveFinishedTasksGroup(int groupId)
 
 	return taskList;
 }
-// ²éÑ¯·Ö×éËùÓĞ´ı°ì
+// æŸ¥è¯¢åˆ†ç»„æ‰€æœ‰å¾…åŠ
 QList<KTask> KDatabase::selectAllTasksGroup(int groupId)
 {
 	if (!m_db.open()) {
@@ -957,7 +957,7 @@ QList<KTask> KDatabase::selectAllTasksGroup(int groupId)
 	}
 
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		int id = query.value("id").toInt();
 		int groupId = query.value("group_id").isNull() ? -1 : query.value("group_id").toInt();
 		int userId = -1;
@@ -983,7 +983,7 @@ QList<KTask> KDatabase::selectAllTasksGroup(int groupId)
 
 	return taskList;
 }
-// ²éÑ¯ÓÃ»§ÑûÇëÏûÏ¢
+// æŸ¥è¯¢ç”¨æˆ·é‚€è¯·æ¶ˆæ¯
 QList<int> KDatabase::selectUserInfoByUserId(int user_id)
 {
 	QList<int>list;
@@ -1003,12 +1003,12 @@ QList<int> KDatabase::selectUserInfoByUserId(int user_id)
 		return list;
 	}
 	while (query.next()) {
-		// »ñÈ¡²éÑ¯½á¹ûÖĞµÄËùÓĞ×Ö¶ÎÖµ
+		// è·å–æŸ¥è¯¢ç»“æœä¸­çš„æ‰€æœ‰å­—æ®µå€¼
 		list.append(query.value(0).toInt());
 	}
 	return list;
 }
-// ²éÑ¯×éÃû×Ö
+// æŸ¥è¯¢ç»„åå­—
 QString KDatabase::selectGroupNameById(int id)
 {
 	if (!m_db.open()) {
@@ -1028,7 +1028,7 @@ QString KDatabase::selectGroupNameById(int id)
 	}
 	return "";
 }
-// ²éÑ¯×é³ÉÔ±
+// æŸ¥è¯¢ç»„æˆå‘˜
 QString KDatabase::selectGroupsMemberIds(int group_id)
 {
 	if (!m_db.open()) {
@@ -1047,7 +1047,7 @@ QString KDatabase::selectGroupsMemberIds(int group_id)
 	}
 	return "";
 }
-// ²éÑ¯ÓÃ»§ID
+// æŸ¥è¯¢ç”¨æˆ·ID
 int KDatabase::selectUserID(QString username)
 {
 	if (!m_db.open()) {
@@ -1057,7 +1057,7 @@ int KDatabase::selectUserID(QString username)
 	QSqlQuery query;
 	QString sqltext = "SELECT id FROM todo_user WHERE username = :username";
 	query.prepare(sqltext);
-	// Ê¹ÓÃbindValue()·½·¨½«²ÎÊı°ó¶¨µ½²éÑ¯Óï¾ä
+	// ä½¿ç”¨bindValue()æ–¹æ³•å°†å‚æ•°ç»‘å®šåˆ°æŸ¥è¯¢è¯­å¥
 	query.bindValue(":username", username);
 
 	bool ok = query.exec();
@@ -1066,7 +1066,7 @@ int KDatabase::selectUserID(QString username)
 	}
 
 	if (query.next()) {
-		// ´Ó½á¹ûÖĞ»ñÈ¡idÖµ²¢·µ»ØËü
+		// ä»ç»“æœä¸­è·å–idå€¼å¹¶è¿”å›å®ƒ
 		int userId = query.value(0).toInt();
 		return userId;
 	}
@@ -1074,17 +1074,17 @@ int KDatabase::selectUserID(QString username)
 		return -1;
 	}
 }
-// ¿ªÆôÊÂÎñ
+// å¼€å¯äº‹åŠ¡
 void KDatabase::transaction()
 {
 	m_db.transaction();
 }
-// Ìá½»ÊÂÎñ
+// æäº¤äº‹åŠ¡
 void KDatabase::commit()
 {
 	m_db.commit();
 }
-// ÊÂÎñ»Ø¹ö
+// äº‹åŠ¡å›æ»š
 void KDatabase::rollback()
 {
 	m_db.rollback();
