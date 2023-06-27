@@ -1,0 +1,2152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KMainWindowClass</class>
+ <widget class="QWidget" name="KMainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1278</width>
+    <height>893</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>KMainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="kmainwindow.qrc">
+    <normaloff>:/images/calendar.svg</normaloff>:/images/calendar.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(251,102,102, 200), stop:1 rgba(20,196,188, 210));</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_17">
+   <item row="0" column="1">
+    <spacer name="verticalSpacer_7">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>2</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_14">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>2</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QWidget" name="verticalWidgetAll" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(31,31,31);	
+background-color: rgb(255, 255, 255);
+border:2px solid rgb(20,196,188);
+border-radius:30px;
+text-align:center;
+</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="1">
+       <spacer name="verticalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <spacer name="horizontalSpacer_12">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>2</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="2" column="1">
+       <spacer name="verticalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>2</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_all" stretch="2,5,2">
+        <item>
+         <widget class="QWidget" name="verticalWidgetLeft" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(31,31,31);	
+background-color: rgb(255, 255, 255);
+border:2px solid rgb(246,111,111);
+border-radius:30px;
+text-align:center;
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="3,3,3,18,1,2,2">
+           <item>
+            <widget class="QPushButton" name="btnHome">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton:!checked {
+    border: none;
+    font: 25 13pt &quot;等线&quot;;
+
+}
+QPushButton:checked {
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+    border: none;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 13pt &quot;等线&quot;;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>  我的首页</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/images/home.svg</normalon>
+              </iconset>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnTodo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton:!checked {
+    border: none;
+    font: 25 13pt &quot;等线&quot;;
+}
+QPushButton:checked {
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+    border: none;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 13pt &quot;等线&quot;;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>  我的待办</string>
+             </property>
+             <property name="icon">
+              <iconset resource="kmainwindow.qrc">
+               <normaloff>:/images/user.svg</normaloff>
+               <normalon>:/images/user.svg</normalon>:/images/user.svg</iconset>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnGroup">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton:!checked {
+    border: none;
+    font: 25 13pt &quot;等线&quot;;
+}
+QPushButton:checked {
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+    border: none;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 13pt &quot;等线&quot;;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 13pt &quot;等线&quot;;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>  添加分组</string>
+             </property>
+             <property name="icon">
+              <iconset resource="kmainwindow.qrc">
+               <normaloff>:/images/calendar-plus.svg</normaloff>
+               <normalon>:/images/calendar-plus.svg</normalon>:/images/calendar-plus.svg</iconset>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTreeWidget" name="treeWidgetLeft">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-radius:0px;
+border:none;
+font: 25 10pt &quot;等线&quot;;</string>
+             </property>
+             <column>
+              <property name="text">
+               <string notr="true">1</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="userHead">
+             <property name="styleSheet">
+              <string notr="true">border: none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="kmainwindow.qrc">
+               <normaloff>:/images/user.svg</normaloff>:/images/user.svg</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_username">
+             <property name="styleSheet">
+              <string notr="true">border: none;
+font: 25 13pt &quot;等线&quot;;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;UserName&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_welcome">
+             <property name="styleSheet">
+              <string notr="true">border: none;
+font: 25 13pt &quot;等线&quot;;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Welcome!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="verticalWidgetMid" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(31,31,31);	
+background-color: rgb(255, 255, 255);
+border:2px solid rgb(146,84,205);
+border-radius:30px;
+text-align:center;
+</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="2" column="1">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>2</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>2</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>2</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="2">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>2</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QStackedWidget" name="stackedWidgetMid">
+             <property name="styleSheet">
+              <string notr="true">font: 25 10pt &quot;等线&quot;;
+color: rgb(31,31,31);	
+background-color: rgb(255, 255, 255);
+border:2px solid rgb(16,138,220);
+text-align:center;</string>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="pageHome">
+              <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,0,0,30,0">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,3,1">
+                 <item>
+                  <widget class="QLabel" name="labelHome">
+                   <property name="styleSheet">
+                    <string notr="true">border:none;
+font: 25 12pt &quot;等线&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;我的首页&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>200</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBoxMySort">
+                   <property name="styleSheet">
+                    <string notr="true">border:2px solid rgb(215,217,222);
+color: rgb(54,66,90);
+border-radius:0px;</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>默认排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/calendar.svg</normaloff>:/images/calendar.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按到期时间排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-wide-short.svg</normaloff>:/images/arrow-up-wide-short.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按创建时间排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-short-wide.svg</normaloff>:/images/arrow-up-short-wide.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按优先级排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-right-dots.svg</normaloff>:/images/arrow-up-right-dots.svg</iconset>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnRotate">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>  刷新</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="kmainwindow.qrc">
+                     <normaloff>:/images/arrows-rotate.svg</normaloff>
+                     <normalon>:/images/arrows-rotate.svg</normalon>:/images/arrows-rotate.svg</iconset>
+                   </property>
+                   <property name="checkable">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="stackedWidgetHomeNewtodo">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:0px;
+border:none;</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_13">
+                  <layout class="QGridLayout" name="gridLayout_14">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_30">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="btnNewToDo">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(78, 189, 197);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+  点击新建待办</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_31">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Expanding</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_14">
+                  <layout class="QGridLayout" name="gridLayout_15">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_32">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="lineEditNewTodo">
+                     <property name="styleSheet">
+                      <string notr="true">border:2px solid rgb(16,138,220);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_33">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Preferred</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QTreeWidget" name="treeWidget">
+                   <property name="styleSheet">
+                    <string notr="true">border-radius:0px;
+font: 25 11pt &quot;等线&quot;;</string>
+                   </property>
+                   <column>
+                    <property name="text">
+                     <string notr="true">1</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_5">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Preferred</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="pageGroup">
+              <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0,0,0,13">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0,0,1,0,6,0,1">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="styleSheet">
+                    <string notr="true">border:none;</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;我的分组&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_6">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>150</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnChangeGroupName">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>分组重命名</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="kmainwindow.qrc">
+                     <normaloff>:/images/bars-staggered.svg</normaloff>:/images/bars-staggered.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnDelete">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>删除分组</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="kmainwindow.qrc">
+                     <normaloff>:/images/trash-can.svg</normaloff>:/images/trash-can.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_7">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>5</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBoxGroupSort">
+                   <property name="styleSheet">
+                    <string notr="true">border:2px solid rgb(215,217,222);
+color: rgb(54,66,90);
+border-radius:0px;</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>默认排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/calendar.svg</normaloff>:/images/calendar.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按到期时间排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-wide-short.svg</normaloff>:/images/arrow-up-wide-short.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按创建时间排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-short-wide.svg</normaloff>:/images/arrow-up-short-wide.svg</iconset>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>按优先级排序</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/arrow-up-right-dots.svg</normaloff>:/images/arrow-up-right-dots.svg</iconset>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_8">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>5</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnRotateGroup">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>  刷新</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="kmainwindow.qrc">
+                     <normaloff>:/images/arrows-rotate.svg</normaloff>
+                     <normalon>:/images/arrows-rotate.svg</normalon>:/images/arrows-rotate.svg</iconset>
+                   </property>
+                   <property name="checkable">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="stackedWidgetGroupNew">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:0px;
+border:none;</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>2</number>
+                 </property>
+                 <widget class="QWidget" name="page_7">
+                  <layout class="QGridLayout" name="gridLayout_8">
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_17">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Expanding</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="btnNewGroup">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(78, 189, 197);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+  点击新建分组</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_20">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_8">
+                  <layout class="QGridLayout" name="gridLayout_9">
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="lineEditNewGroup">
+                     <property name="styleSheet">
+                      <string notr="true">border:2px solid rgb(16,138,220);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_19">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_21">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_15">
+                  <layout class="QGridLayout" name="gridLayout_16">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_35">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="lineEditGroupName">
+                     <property name="styleSheet">
+                      <string notr="true">border:2px solid rgb(16,138,220);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_34">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="stackedWidgetSend">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:0px;
+border:none;</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>1</number>
+                 </property>
+                 <widget class="QWidget" name="page_9">
+                  <layout class="QGridLayout" name="gridLayout_10">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_22">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="btnNewGroupMem">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(78, 189, 197);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+  点击发送邀请</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_23">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Expanding</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_10">
+                  <layout class="QGridLayout" name="gridLayout_11">
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="lineEditSend">
+                     <property name="styleSheet">
+                      <string notr="true">border:2px solid rgb(16,138,220);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_24">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_25">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QStackedWidget" name="stackedWidgetGroupNewTodo">
+                 <property name="styleSheet">
+                  <string notr="true">border-radius:0px;
+border:none;</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_11">
+                  <layout class="QGridLayout" name="gridLayout_12">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_26">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>5</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="btnNewGrouptodo">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(78, 189, 197);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+  点击新建待办</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_27">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Expanding</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="page_12">
+                  <layout class="QGridLayout" name="gridLayout_13">
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="lineEditNewGrouptodo">
+                     <property name="styleSheet">
+                      <string notr="true">border:2px solid rgb(16,138,220);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_28">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_29">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Preferred</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <spacer name="horizontalSpacer_18">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QStackedWidget" name="stackedWidgetGroupAll">
+                   <property name="styleSheet">
+                    <string notr="true">border: none;
+border-radius:0px;</string>
+                   </property>
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <widget class="QWidget" name="page_5">
+                    <layout class="QGridLayout" name="gridLayout_7">
+                     <item row="0" column="0">
+                      <widget class="QTreeWidget" name="treeWidgetGroup">
+                       <property name="styleSheet">
+                        <string notr="true">border:2px solid rgb(16,138,220);
+font: 25 11pt &quot;等线&quot;;</string>
+                       </property>
+                       <column>
+                        <property name="text">
+                         <string notr="true">1</string>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <spacer name="verticalSpacer_9">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Preferred</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                   <widget class="QWidget" name="page_6">
+                    <layout class="QVBoxLayout" name="verticalLayout_8" stretch="10,1,1">
+                     <item>
+                      <widget class="QTextBrowser" name="textBrowserGetMsg">
+                       <property name="styleSheet">
+                        <string notr="true">border:2px solid rgb(16,138,220);
+font: 25 15pt &quot;等线&quot;;</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btnAccept">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>接 受</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="kmainwindow.qrc">
+                         <normaloff>:/images/square-check.svg</normaloff>:/images/square-check.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="btnRefuse">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>拒 绝</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="kmainwindow.qrc">
+                         <normaloff>:/images/rectangle-xmark.svg</normaloff>:/images/rectangle-xmark.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Preferred</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QStackedWidget" name="stackedWidgetRight">
+          <property name="styleSheet">
+           <string notr="true">font: 25 10pt &quot;等线&quot;;
+color: rgb(31,31,31);	
+background-color: rgb(255, 255, 255);
+border:2px solid rgb(246,111,111);
+text-align:center;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="pageHomeChange">
+           <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1,6,8">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QCheckBox" name="checkBoxHome">
+                <property name="styleSheet">
+                 <string notr="true">border:0px;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEditName"/>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>120</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,6,6">
+              <item>
+               <spacer name="horizontalSpacer_11">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>11</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBoxHome">
+                <property name="styleSheet">
+                 <string notr="true">border:2px solid rgb(215,217,222);
+color: rgb(54,66,90);
+border-radius:0px;</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>优先级 无</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>优先级 低</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>优先级 中</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>优先级 高</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,1,1,1,1">
+              <item>
+               <widget class="QStackedWidget" name="stackedWidgetDueDate">
+                <property name="styleSheet">
+                 <string notr="true">border: none;</string>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="page">
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="btnHomeDate">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>     设 置 到 期</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/calendar.svg</normaloff>:/images/calendar.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_2">
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="0">
+                   <widget class="QDateTimeEdit" name="dateTimeEditHome">
+                    <property name="styleSheet">
+                     <string notr="true">border:2px solid rgb(246,111,111);</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QStackedWidget" name="stackedWidgetRemind">
+                <property name="styleSheet">
+                 <string notr="true">border: none;</string>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <widget class="QWidget" name="page_3">
+                 <layout class="QGridLayout" name="gridLayout_6">
+                  <item row="0" column="0">
+                   <widget class="QPushButton" name="btnHomeRemind">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>    设 置 提 醒</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="kmainwindow.qrc">
+                      <normaloff>:/images/bell.svg</normaloff>:/images/bell.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="page_4">
+                 <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="1,5">
+                  <item>
+                   <widget class="QCheckBox" name="checkBoxHome_Repeat">
+                    <property name="styleSheet">
+                     <string notr="true">border:0px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateTimeEdit" name="dateTimeEditHome_2">
+                    <property name="styleSheet">
+                     <string notr="true">border:2px solid rgb(246,111,111);</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnHomeDescription">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton:!checked {
+    border: none;
+    border-radius:0px;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+QPushButton:checked {
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    border: none;
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(232, 235, 239);
+    color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>    添 加 描 述</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="kmainwindow.qrc">
+                  <normaloff>:/images/bars-staggered.svg</normaloff>:/images/bars-staggered.svg</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>false</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnHomeLocation">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    border: none;
+    border-radius:0px;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>    添 加 地 点</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="kmainwindow.qrc">
+                  <normaloff>:/images/location-dot.svg</normaloff>:/images/location-dot.svg</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>false</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnHomeNote">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    border: none;
+    border-radius:0px;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>    添 加 备 注</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="kmainwindow.qrc">
+                  <normaloff>:/images/book.svg</normaloff>:/images/book.svg</iconset>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="autoRepeat">
+                 <bool>false</bool>
+                </property>
+                <property name="autoExclusive">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QStackedWidget" name="stackedWidgetRightMain">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
+              <widget class="QWidget" name="pageView">
+               <layout class="QGridLayout" name="gridLayout_3">
+                <item row="0" column="0">
+                 <widget class="QTreeWidget" name="treeWidgetRight">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:2px solid rgb(246,111,111);
+border-radius:0px;
+font: 25 10pt &quot;等线&quot;;</string>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string notr="true">1</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="pageBigeer">
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QPushButton" name="btnHomeCloseBigger">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string> 关 闭</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextBrowser" name="textBrowserHomeBigger">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:2px solid rgb(246,111,111);
+border-radius:0px;
+font: 25 15pt &quot;等线&quot;;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="pageEdit">
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QPushButton" name="btnHomeOK">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: none;
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+    color: rgb(54,66,90);
+}
+QPushButton:hover {
+    background-color: rgb(232, 235, 239);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+
+QPushButton:pressed { 
+    background-color: rgb(78, 189, 197);
+    font: 25 10pt &quot;等线&quot;;
+    font-weight: bold;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>确 定</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextEdit" name="textEditHome">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border:2px solid rgb(246,111,111);
+border-radius:0px;
+font: 25 11pt &quot;等线&quot;;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer_13">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>2</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <spacer name="verticalSpacer_8">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>2</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="kmainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

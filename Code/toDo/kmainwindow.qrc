@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/eye.svg</file>
+        <file>images/eye-slash.svg</file>
+        <file>images/home.svg</file>
+        <file>images/user.svg</file>
+        <file>images/calendar-plus.svg</file>
+        <file>images/arrows-rotate.svg</file>
+        <file>images/file-lines.svg</file>
+        <file>images/calendar.svg</file>
+        <file>images/bars-staggered.svg</file>
+        <file>images/bell.svg</file>
+        <file>images/book.svg</file>
+        <file>images/location-dot.svg</file>
+        <file>images/arrow-up-right-dots.svg</file>
+        <file>images/arrow-up-short-wide.svg</file>
+        <file>images/arrow-up-wide-short.svg</file>
+        <file>images/address-book.svg</file>
+        <file>images/rectangle-xmark.svg</file>
+        <file>images/square-check.svg</file>
+        <file>images/trash-can.svg</file>
+    </qresource>
+</RCC>

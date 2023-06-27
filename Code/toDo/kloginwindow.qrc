@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/eye.svg</file>
+        <file>images/eye-slash.svg</file>
+        <file>images/address-card.svg</file>
+    </qresource>
+</RCC>

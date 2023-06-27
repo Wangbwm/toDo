@@ -1,0 +1,11 @@
+Debug/*
+x64/*
+.vs
+
+!/toDo.sln
+!*.vcxproj
+!*.filters
+!*.cpp
+!*.h
+
+*.user
